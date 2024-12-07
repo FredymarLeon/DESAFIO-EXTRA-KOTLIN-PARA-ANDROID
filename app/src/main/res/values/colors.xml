@@ -2,6 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="gray_cards">#F2F1F6</color>
-    <color name="blue_app">#2AB2FA</color>
+    <color name="light_gray1">#F2F1F6</color>
+    <color name="light_gray2">#EDEDED</color>
+    <color name="gray1">#3A404A</color>
+    <color name="gray2">#767474</color>
+    <color name="blue_app1">#07B2FD</color>
+    <color name="blue_app2">#0899D8</color>
 </resources>
