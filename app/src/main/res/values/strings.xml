@@ -16,8 +16,8 @@
     <string name="tv_card_loans">Empréstimos</string>
 
 <!--    GridLayout 2-->
-    <string name="tv_message_creditCard">Peça um\ncartão agora</string>
-    <string name="tv_title_creditCard">Cartão</string>
+    <string name="tv_message_card">Peça um\ncartão agora</string>
+    <string name="tv_title_card">Cartão</string>
     <string name="tv_title_apply_loan">Empréstimos</string>
     <string name="tv_message_apply_loan">Pegue até:</string>
     <string name="tv_apply_loan">Pegue até:</string>

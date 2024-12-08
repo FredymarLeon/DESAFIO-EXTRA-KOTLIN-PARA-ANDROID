@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<androidx.core.widget.NestedScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
     android:layout_marginHorizontal="30dp"
     android:layout_marginTop="20dp"
     tools:context=".fragments.HomeFragment">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/ivClientPhoto"
@@ -89,7 +91,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/tvCurrentBalanceNumber"
             app:srcCompat="@drawable/baseline_keyboard_arrow_right_24" />
-        
+
         <GridLayout
             android:id="@+id/gridLayout1"
             android:layout_width="match_parent"
@@ -283,7 +285,7 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cvCreditCard"
+                android:id="@+id/cvCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="0"
@@ -305,21 +307,21 @@
                     android:backgroundTint="@color/blue_app1">
 
                     <TextView
-                        android:id="@+id/tvTitleCreditCard"
+                        android:id="@+id/tvTitleCard"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="start"
-                        android:text="@string/tv_title_creditCard"
+                        android:text="@string/tv_title_card"
                         android:textColor="@color/white"
                         android:textStyle="bold"
                         android:textSize="14sp"/>
                     <TextView
-                        android:id="@+id/tvMessageCreditCard"
+                        android:id="@+id/tvMessageCard"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
                         android:gravity="start"
-                        android:text="@string/tv_message_creditCard"
+                        android:text="@string/tv_message_card"
                         android:textColor="@color/white" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -464,5 +466,4 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-</ScrollView>
+</androidx.core.widget.NestedScrollView>
