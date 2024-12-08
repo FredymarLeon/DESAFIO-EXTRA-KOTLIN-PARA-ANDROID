@@ -54,7 +54,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toTopOf="@+id/btnInvest"
         tools:layout_editor_absoluteX="25dp">
@@ -262,7 +262,8 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/blue_app1"
         app:cornerRadius="15dp"
-        android:padding="16dp"
+        android:layout_marginBottom="10dp"
+        android:padding="20dp"
         android:text="@string/text_btn_invest"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"

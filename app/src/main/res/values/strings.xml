@@ -57,6 +57,12 @@
     <string name="investment_income">Rendimento:</string>
     <string name="percentage_of_income">130% do CDI</string>
     <string name="text_btn_invest">Investir</string>
+    <string name="chip_summary">Resumo</string>
+    <string name="chip_account">Conta</string>
+    <string name="chip_cards">Cartões</string>
+    <string name="chip_loans">Empréstimos</string>
+    <string name="chip_investments">Investimentos</string>
+    <string name="chip_protections">Proteções</string>
 
 
 </resources>
