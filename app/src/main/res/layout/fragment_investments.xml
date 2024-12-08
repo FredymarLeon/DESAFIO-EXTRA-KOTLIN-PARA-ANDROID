@@ -1,14 +1,272 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingHorizontal="25dp"
+    android:paddingVertical="5dp"
     tools:context=".fragments.InvestmentsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/tvTitleDailyLiquidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="@string/title_daily_liquidity"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tvDailyLiquidityPercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/daily_liquidity_percentage"
+        android:textColor="@color/blue_app1"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleDailyLiquidity" />
+
+    <TextView
+        android:id="@+id/tvInfo_protection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/information_protection"
+        android:textColor="@color/gray1"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDailyLiquidityPercentage" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/baseline_help_outline_blue"
+        app:layout_constraintBottom_toBottomOf="@+id/tvInfo_protection"
+        app:layout_constraintStart_toEndOf="@+id/tvInfo_protection"
+        app:layout_constraintTop_toTopOf="@+id/tvInfo_protection" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnInvest"
+        tools:layout_editor_absoluteX="25dp">
+
+        <TextView
+            android:id="@+id/tvMinInvestment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_min_investment"
+            android:textColor="@color/gray1"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMaxInvestment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvMinInvestmentValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/min_investment_value"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMinInvestment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvMinInvestment" />
+
+        <TextView
+            android:id="@+id/tvMaxInvestment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/tv_max_investment"
+            android:textColor="@color/gray1"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvMinInvestment" />
+
+        <TextView
+            android:id="@+id/tvMaxInvestmentValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/max_investment_value"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMaxInvestment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvMaxInvestment" />
+
+        <TextView
+            android:id="@+id/tvInvestmentTerm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/investment_term"
+            android:textColor="@color/gray1"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvMaxInvestmentValue" />
+
+        <TextView
+            android:id="@+id/tvDaysInvestmentTerm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/days_investment_term"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvInvestmentTerm" />
+
+        <TextView
+            android:id="@+id/tvIR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/IR"
+            android:textColor="@color/gray1"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvInvestmentTerm" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivIRHelp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/baseline_help_outline_blue"
+            app:layout_constraintBottom_toBottomOf="@+id/tvIR"
+            app:layout_constraintStart_toEndOf="@+id/tvIR"
+            app:layout_constraintTop_toTopOf="@+id/tvIR" />
+
+        <TextView
+            android:id="@+id/tvIRType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/IR_type"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvIR" />
+
+        <TextView
+            android:id="@+id/tvIOF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/IOF"
+            android:textColor="@color/gray1"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvIR" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivIOFHelp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/baseline_help_outline_blue"
+            app:layout_constraintBottom_toBottomOf="@+id/tvIOF"
+            app:layout_constraintStart_toEndOf="@+id/tvIOF"
+            app:layout_constraintTop_toTopOf="@+id/tvIOF" />
+
+        <TextView
+            android:id="@+id/tvIOFType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/IOF_type"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvIOF" />
+
+        <TextView
+            android:id="@+id/tvRescue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/rescue"
+            android:textColor="@color/gray1"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvIOF" />
+
+        <TextView
+            android:id="@+id/tvRescueType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rescue_type"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvRescue" />
+
+        <TextView
+            android:id="@+id/tvIssuingBank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/issuing_bank"
+            android:textColor="@color/gray1"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRescue" />
+
+        <TextView
+            android:id="@+id/tvNameIssuingBank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name_issuing_bank"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvIssuingBank" />
+
+        <TextView
+            android:id="@+id/tvInvestmentIncome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/investment_income"
+            android:textColor="@color/gray1"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvIssuingBank" />
+
+        <TextView
+            android:id="@+id/tvPercentageIncome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/percentage_of_income"
+            android:textColor="@color/blue_app1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvInvestmentIncome" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnInvest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue_app1"
+        app:cornerRadius="15dp"
+        android:padding="16dp"
+        android:text="@string/text_btn_invest"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

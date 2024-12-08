@@ -9,7 +9,7 @@ import androidx.navigation.findNavController
 import com.fleon.clonedoaplicativodobancopan.R
 import com.fleon.clonedoaplicativodobancopan.databinding.FragmentHomeBinding
 
-class HomeFragment : Fragment(R.layout.fragment_home) {
+class HomeFragment : Fragment() {
 
     private var homeBinding: FragmentHomeBinding? = null
     private val binding get() = homeBinding!!

@@ -6,6 +6,6 @@
     <color name="light_gray2">#EDEDED</color>
     <color name="gray1">#3A404A</color>
     <color name="gray2">#767474</color>
-    <color name="blue_app1">#07B2FD</color>
+    <color name="blue_app1">#07B2FD</color>#4b8cc7
     <color name="blue_app2">#0899D8</color>
 </resources>
