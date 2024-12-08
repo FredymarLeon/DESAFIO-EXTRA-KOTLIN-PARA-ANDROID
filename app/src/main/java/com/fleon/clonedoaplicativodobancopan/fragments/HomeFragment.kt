@@ -29,5 +29,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             it.findNavController().navigate(R.id.action_homeFragment_to_cardFragment)
         }
 
+        binding.cvApplyInvestments.setOnClickListener {
+            it.findNavController().navigate(R.id.action_homeFragment_to_investmentsFragment)
+        }
+
     }
 }
