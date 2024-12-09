@@ -1,70 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginHorizontal="30dp"
-    android:layout_marginVertical="20dp"
-    tools:context=".fragments.CardFragment">
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cvCardElo"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:backgroundTint="#039DD5"
-        app:cardCornerRadius="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_gravity="end"
-                android:layout_marginTop="35dp"
-                android:layout_marginEnd="35dp"
-                android:contentDescription="@string/icon_bank"
-                android:src="@drawable/ic_bank" />
-
-            <TextView
-                android:id="@+id/tvElo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="75dp"
-                android:fontFamily="@font/allerta_stencil"
-                android:gravity="bottom"
-                android:text="@string/elo_card"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginBottom="20dp"
-                android:gravity="bottom"
-                android:text="@string/text_card"
-                android:textColor="@color/white"
-                android:textSize="14sp" />
-        </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
+    android:background="@color/white"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/scrollViewChips">
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="20dp"
+        android:gravity="bottom"
+        android:orientation="vertical">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvCardElo"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:backgroundTint="#039DD5"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginEnd="35dp"
+                    android:contentDescription="@string/icon_bank"
+                    android:src="@drawable/ic_bank" />
+
+                <TextView
+                    android:id="@+id/tvElo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="75dp"
+                    android:fontFamily="@font/allerta_stencil"
+                    android:gravity="bottom"
+                    android:text="@string/elo_card"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="bottom"
+                    android:text="@string/text_card"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="bottom"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/tvCardLimit"
@@ -72,31 +78,31 @@
                 android:layout_height="wrap_content"
                 android:text="@string/tv_card_limit"
                 android:textSize="22sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tvAvailableCardLimit"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/tv_available_card_limit"
-                android:textColor="@color/blue_app1"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvCardLimit" />
+                android:orientation="horizontal">
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/ivCardVisibilityOff"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginEnd="16dp"
-                android:scaleType="fitCenter"
-                android:src="@drawable/ic_visibility_off"
-                app:layout_constraintBottom_toBottomOf="@+id/tvAvailableCardLimit"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tvAvailableCardLimit" />
+                <TextView
+                    android:id="@+id/tvAvailableCardLimit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:text="@string/tv_available_card_limit"
+                    android:textColor="@color/blue_app1"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivCardVisibilityOff"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_visibility_off" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/tvCurrentInvoice"
@@ -105,9 +111,7 @@
                 android:layout_marginTop="16dp"
                 android:text="@string/tv_current_invoice"
                 android:textColor="@color/gray1"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvAvailableCardLimit" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/tvCurrentInvoiceAmount"
@@ -115,99 +119,95 @@
                 android:layout_height="wrap_content"
                 android:text="@string/tv_current_invoice_amount"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvCurrentInvoice" />
+                android:textStyle="bold" />
 
             <com.google.android.material.progressindicator.LinearProgressIndicator
                 android:id="@+id/progressBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
-                android:progress="75"
-                android:progressBackgroundTint="@color/blue_app1"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvCurrentInvoiceAmount" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_marginBottom="20dp"
+                android:progress="75" />
+        </LinearLayout>
+
+
+        <HorizontalScrollView
+            android:id="@+id/scrollViewChips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:paddingHorizontal="8dp"
+            android:paddingBottom="6dp"
+            android:scrollbars="none">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipSummary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chip_summary"
+                    android:textSize="14sp"
+                    app:chipBackgroundColor="@color/light_gray3"
+                    app:chipCornerRadius="15dp"
+                    app:chipStrokeColor="@color/light_gray3" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chip_account"
+                    android:textSize="14sp"
+                    app:chipBackgroundColor="@color/light_gray3"
+                    app:chipCornerRadius="15dp"
+                    app:chipStrokeColor="@color/light_gray3" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipCards"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chip_cards"
+                    android:textColor="@color/white"
+                    app:chipBackgroundColor="@color/gray1"
+                    app:chipCornerRadius="15dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipLoans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chip_loans"
+                    android:textSize="14sp"
+                    app:chipBackgroundColor="@color/light_gray3"
+                    app:chipCornerRadius="15dp"
+                    app:chipStrokeColor="@color/light_gray3" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipInvestments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chip_investments"
+                    android:textSize="14sp"
+                    app:chipBackgroundColor="@color/light_gray3"
+                    app:chipCornerRadius="15dp"
+                    app:chipStrokeColor="@color/light_gray3" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipProtections"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chip_protections"
+                    android:textSize="14sp"
+                    app:chipBackgroundColor="@color/light_gray3"
+                    app:chipCornerRadius="15dp"
+                    app:chipStrokeColor="@color/light_gray3" />
+            </com.google.android.material.chip.ChipGroup>
+
+        </HorizontalScrollView>
+
     </LinearLayout>
 
-    <HorizontalScrollView
-        android:id="@+id/scrollViewChips"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="8dp"
-        android:paddingVertical="12dp"
-        android:scrollbars="none"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <com.google.android.material.chip.ChipGroup
-            android:id="@+id/chipGroup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp">
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chipSummary"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/chip_summary"
-                android:textSize="14sp"
-                app:chipBackgroundColor="@color/light_gray3"
-                app:chipCornerRadius="15dp"
-                app:chipStrokeColor="@color/light_gray3" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chipAccount"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/chip_account"
-                android:textSize="14sp"
-                app:chipBackgroundColor="@color/light_gray3"
-                app:chipCornerRadius="15dp"
-                app:chipStrokeColor="@color/light_gray3" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chipCards"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/chip_cards"
-                android:textColor="@color/white"
-                app:chipBackgroundColor="@color/gray1"
-                app:chipCornerRadius="15dp" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chipLoans"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/chip_loans"
-                android:textSize="14sp"
-                app:chipBackgroundColor="@color/light_gray3"
-                app:chipCornerRadius="15dp"
-                app:chipStrokeColor="@color/light_gray3" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chipInvestments"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/chip_investments"
-                android:textSize="14sp"
-                app:chipBackgroundColor="@color/light_gray3"
-                app:chipCornerRadius="15dp"
-                app:chipStrokeColor="@color/light_gray3" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chipProtections"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/chip_protections"
-                android:textSize="14sp"
-                app:chipBackgroundColor="@color/light_gray3"
-                app:chipCornerRadius="15dp"
-                app:chipStrokeColor="@color/light_gray3" />
-        </com.google.android.material.chip.ChipGroup>
-    </HorizontalScrollView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

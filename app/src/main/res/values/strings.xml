@@ -25,7 +25,7 @@
     <string name="tv_title_apply_investments">Investimentos</string>
     <string name="tv_message_apply_investments">Coloque seu \ndinheiro para \nrender</string>
     <string name="tv_title_payment_options">Pagamentos</string>
-    <string name="tv_message_payment_options">Parele seus \nboletos em \naté 12x</string>
+    <string name="tv_message_payment_options">Parcele seus \nboletos em \naté 12x</string>
 
 <!--    Fragment Card-->
     <string name="elo_card">elo</string>
@@ -63,6 +63,7 @@
     <string name="chip_loans">Empréstimos</string>
     <string name="chip_investments">Investimentos</string>
     <string name="chip_protections">Proteções</string>
+    <string name="health_plan">Saúde de qualidade \npagando apenas R$ \n8,99 por mês.</string>
 
 
 </resources>
